@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from notice_board import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='admin_panel'),
+    path('home/', views.home, name='home'),
+    path('register/', views.register, name='register'),
 ]

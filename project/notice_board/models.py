@@ -13,7 +13,7 @@ class Offer(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return '{}, {}'.format(self.author, sel f.localization)
+        return '{}, {}'.format(self.author, self.localization)
 
 
     class Meta:
